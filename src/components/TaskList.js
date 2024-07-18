@@ -1,13 +1,13 @@
 import React from "react";
-import TasItem from "./TaskItem";
-
-const TastList = ({ tasks }) => {
+import TaskItem from "./TaskItem";
+import styles from "./TaskList.module.css";
+const TaskList = ({ tasks }) => {
   return (
     <div>
       {tasks.map((task) => (
-        <TasItem key={task.id} task={task} />
+        <TaskItem key={task.id} task={task} />
       ))}
     </div>
   );
 };
-export default TastList;
+export default TaskList;

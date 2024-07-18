@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import AddTask from "./components/AddTask";
 import TaskList from "./components/TaskList";
+import TaskItem from "./components/TaskItem";
+import styles from "./App.module.css";
 
 function App() {
   const [tasks, setTasks] = useState([]);

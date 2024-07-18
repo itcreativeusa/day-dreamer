@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./AddTask.module.css";
 const AddTask = ({ setTask }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
