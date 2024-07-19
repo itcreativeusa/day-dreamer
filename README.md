@@ -29,3 +29,13 @@ Day Planner App is a React-based application designed as part of a boot camp cha
    ```bash
    git clone https://github.com/itcreativeusa/day-dreamer.git
    cd day-dreamer
+   ```
+
+## Screenshots
+
+Screenshot of the Day Planner App:
+![Day Planner App](./assets/images/screenshot.png)
+
+## Credits
+
+Background image by [Annie Spratt](https://unsplash.com/@anniespratt)
