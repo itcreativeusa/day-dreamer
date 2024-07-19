@@ -1,22 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import TaskItem from "./TaskItem";
 import styles from "./TaskList.module.css";
 
-const TaskList = () => {
-  const [tasks, setTasks] = useState([]);
-
-  useEffect(() => {
-    const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    setTasks(savedTasks);
-  }, []);
-
+const TaskList = ({ tasks, removeTask }) => {
   return (
     <div className={styles.taskList}>
-      {tasks.map((task) => (
-        <div key={task.id} className={styles.task}>
-          <h3>{task.title}</h3>
-          <p>{task.description}</p>
-        </div>
-      ))}
+      {tasks.length > 0 ? (
+        <ul>
+          {tasks.map((task, index) => (
+            <TaskItem
+              key={index}
+              task={task}
+              index={index}
+              removeTask={removeTask}
+            />
+          ))}
+        </ul>
+      ) : (
+        <p>No tasks available</p>
+      )}
     </div>
   );
 };

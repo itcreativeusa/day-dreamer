@@ -1,24 +1,21 @@
-import React, { useState, useEffect } from "react";
-import Header from "./components/Header";
+import React, { useState } from "react";
 import TaskList from "./components/TaskList";
 import AddTask from "./components/AddTask";
+import "./App.css";
 
 function App() {
   const [tasks, setTasks] = useState([]);
-  useEffect(() => {
-    //Fetch tasks from the local storage
-    const fetchTasks = async () => {
-      const response = await fetch("/api/tasks");
-      const data = await response.json();
-      setTasks(data);
-    };
-    fetchTasks();
-  }, []);
+
+  const removeTask = (index) => {
+    const newTasks = tasks.filter((task, i) => i !== index);
+    setTasks(newTasks);
+  };
+
   return (
-    <div>
-      <Header />
+    <div className="App">
+      <h1>To-Do List</h1>
       <AddTask setTasks={setTasks} />
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasks} removeTask={removeTask} />
     </div>
   );
 }
