@@ -10,11 +10,10 @@
   margin: 5px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 100%;
 }
 
 .addTask button {
-  background-color: #4caf50;
+  background-color: #ff1493;
   color: white;
   cursor: pointer;
 }

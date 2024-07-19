@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
+  background-image: url("img3.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .container {
@@ -12,5 +16,10 @@
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  background-color: #fff;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* semi-transparent background for readability */
 }
