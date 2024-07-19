@@ -6,7 +6,7 @@ Day Planner App is a React-based application designed as part of a boot camp cha
 
 ## Link to Deployed Application
 
-[Link to Deployed Application](https://itcreativeusa.github.io/day-dreamer)
+[Link to Versel Deployed Application](https://day-dreamer-1a71gnvtr-kateryna-stetsenkos-projects.vercel.app/)
 
 ## GitHub Link
 
