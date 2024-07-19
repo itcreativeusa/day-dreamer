@@ -6,12 +6,11 @@
 
 ## Link to Deployed Application
 
-[https://itcreativeusa.github.io/smart-day-creator](https://itcreativeusa.github.io/smart-day-creator)
+[Github link](https://github.com/itcreativeusa/day-dreamer)
 
 ## GitHub Link
 
-[https://github.com/itcreativeusa/smart-day-creator](https://github.com/itcreativeusa/smart-day-creator)
-
+[Github link](https://github.com/itcreativeusa/day-dreamer)
 ## Table of Contents (Optional)
 
 - [Installation](#installation)
