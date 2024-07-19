@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <h1>Day Dreamer</h1>
+      <h1>Day Planner App</h1>
     </header>
   );
 };

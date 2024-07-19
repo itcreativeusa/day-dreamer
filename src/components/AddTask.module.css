@@ -1,26 +1,21 @@
 .addTask {
   display: flex;
   flex-direction: column;
-  margin: 20px;
-  padding: 10px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  gap: 10px;
 }
 
-.addTask input {
-  margin: 5px 0;
+.addTask input,
+.addTask button {
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
 }
 
 .addTask button {
-  padding: 10px;
   background-color: #4caf50;
   color: white;
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
 }
 
