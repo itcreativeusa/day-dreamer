@@ -1,26 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./AddTask.module.css";
 
 const AddTask = ({ setTasks }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleSubmit = async (e) => {
+  useEffect(() => {
+    const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    setTasks(savedTasks);
+  }, [setTasks]);
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const newTask = { title, description };
+    const newTask = { id: Date.now(), title, description };
 
-    // Save the new task to backend or local storage
-    const response = await fetch("/api/tasks", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newTask),
-    });
+    // Retrieve existing tasks from localStorage
+    const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-    const savedTask = await response.json();
-    setTasks((prevTasks) => [...prevTasks, savedTask]);
+    // Add the new task
+    const updatedTasks = [...savedTasks, newTask];
 
+    // Save the updated task list to localStorage
+    localStorage.setItem("tasks", JSON.stringify(updatedTasks));
+
+    // Update the state
+    setTasks(updatedTasks);
+
+    // Clear the input fields
     setTitle("");
     setDescription("");
   };
@@ -32,14 +38,18 @@ const AddTask = ({ setTasks }) => {
         placeholder="Task Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
+        className={styles.input}
       />
       <input
         type="text"
         placeholder="Description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
+        className={styles.input}
       />
-      <button type="submit">Add Task</button>
+      <button type="submit" className={styles.button}>
+        Add Task
+      </button>
     </form>
   );
 };
