@@ -34,7 +34,7 @@ Day Planner App is a React-based application designed as part of a boot camp cha
 ## Screenshots
 
 Screenshot of the Day Planner App:
-![Day Planner App](./assets/images/screenshot.png)
+![Day Planner App](./screenshot.png)
 
 ## Credits
 
