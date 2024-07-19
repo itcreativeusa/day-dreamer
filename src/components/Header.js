@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "./Header.module.css";
+
+// header component
 const Header = () => {
   useEffect(() => {
     const script = document.createElement("script");

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./TaskItem.module.css";
-
+// task item component
 const TaskItem = ({ task }) => {
   return (
     <div className={styles.taskItem}>
